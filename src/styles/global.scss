@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+$gray: rgb(36, 40, 47);
+$light-gray: rgb(43, 48, 56);
+$white: rgb(255, 255, 255);
+$lighter-gray: rgb(241, 241, 241);
+$light-white: rgba(224, 224, 224, 0.849);
+
+$xxl4: 7rem;
+$xxl3: 6rem;
+$xxl2: 5rem;
+$xxl: 3rem;
+$xl: 2.5rem;
+$lg: 2.2rem;
+$md: 1.8rem;
+$sm: 1.5rem;
+$xs: 1rem;
+$xxs: 0.5rem;
+$xxxs: 0.2rem;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  height: fit-content;
+  padding: $xl $xxl2;
+  background-color: $white;
+
+  a {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-decoration: none;
+    font-size: $xl;
+    font-weight: 600;
+    color: $gray;
+
+    img {
+      height: $xxl2;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .searchbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $md 0px;
+    padding: $md;
+    background-color: $lighter-gray;
+    border-radius: $md;
+
+    #lupa {
+      width: $lg;
+      height: $lg;
+      cursor: pointer;
+      color: $gray;
+      display: none;
+    }
+
+    input {
+      width: 100%;
+      font-size: $sm;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $gray;
+    }
+    ::placeholder {
+      color: $gray;
+    }
+  }
+}
+#app {
+  min-height: 100vh;
+  background-color: $gray;
+}
+.characters {
+  width: 100%;
+  padding: $xxl $xxl2;
+
+  .character {
+    width: 100%;
+    margin-bottom: $xxl;
+    background-color: $light-gray;
+    border-radius: $xs;
+
+    a {
+      width: 100%;
+      color: $white;
+      text-decoration: none;
+
+      img {
+        width: 100%;
+        border-radius: $xs $xs 0px 0px;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      padding: $md;
+      &--name {
+        font-size: $xl;
+        font-weight: 600;
+      }
+
+      &--location {
+        font-size: $md;
+        font-weight: 300;
+
+        b {
+          font-size: $md;
+          font-weight: 300;
+        }
+      }
+
+      &--status {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: $md;
+          font-weight: 400;
+          padding-left: $xs;
+        }
+        .statusIndicator {
+          width: $xs;
+          height: $xs;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .pages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a,
+    p {
+      text-decoration: none;
+      color: $white;
+      padding: $xxs;
+      font-size: $md;
+      font-weight: 400;
+    }
+
+    #currentPage {
+      text-decoration: underline;
+    }
+  }
+}
+
+.characInner {
+  width: 100%;
+  padding: $xxl $xxl2;
+
+  img {
+    width: 100%;
+  }
+  &__info {
+    color: $white;
+
+    &--name {
+      font-size: $xxl;
+      padding: $xs 0px;
+    }
+
+    &--item {
+      font-size: $md;
+      font-weight: 300;
+      padding: $xxxs 0px;
+      b {
+        font-size: $md;
+        font-weight: 500;
+      }
+    }
+
+    &--status {
+      display: flex;
+      align-items: center;
+      padding: $xxxs 0px;
+
+      p {
+        font-size: $md;
+        font-weight: 300;
+        padding-left: $xs;
+      }
+      .statusIndicator {
+        width: $xs;
+        height: $xs;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+#error {
+  width: 200px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  background-color: rgb(247, 54, 54);
+
+  z-index: 1;
+  padding: $xxs;
+  border-radius: $xxs;
+
+  display: flex;
+  justify-content: space-between;
+
+  animation: hideAnimation 3s linear 3s;
+  animation-fill-mode: forwards;
+
+  h1 {
+    color: $white;
+    font-size: $md;
+    font-weight: 400;
+    text-align: center;
+  }
+  #warning {
+    width: $xxl;
+    height: $xxl;
+    color: $white;
+    font-weight: 500;
+  }
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+  }
+}

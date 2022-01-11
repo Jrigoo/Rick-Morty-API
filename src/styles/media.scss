@@ -1,0 +1,180 @@
+@import "global";
+
+@media (min-width: 460px) {
+  * {
+    font-size: 65%;
+  }
+  .nav {
+    padding: $xxl $xxl3;
+  }
+  #header {
+    .searchbar {
+      width: 70%;
+
+      #lupa {
+        display: block;
+      }
+      input {
+        width: 80%;
+      }
+    }
+  }
+  .characters {
+    padding: $xxl3 $xxl4;
+  }
+}
+
+@media (min-width: 580px) {
+  .characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .character {
+      width: 80%;
+    }
+  }
+
+  .characInner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      width: 80%;
+    }
+    &__info {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 730px) {
+  .characters {
+    justify-content: space-between;
+    .character {
+      width: 45%;
+    }
+  }
+  .characInner {
+    img {
+      width: 70%;
+    }
+    &__info {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .nav {
+    padding: $xs $xxl2;
+  }
+  .characInner {
+    align-items: center;
+    img {
+      width: 60%;
+    }
+    &__info {
+      width: 60%;
+    }
+  }
+
+  .characters {
+    .character {
+      width: 30%;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  #header {
+    .searchbar {
+      width: 55%;
+    }
+  }
+
+  .characInner {
+    justify-content: space-evenly;
+
+    img {
+      width: 35%;
+    }
+    &__info {
+      width: 45%;
+      &--name {
+        font-size: $xxl;
+        padding: 0px;
+      }
+
+      &--item {
+        font-size: $md;
+        padding: $xs 0px;
+        b {
+          font-size: $md;
+        }
+      }
+
+      &--status {
+        padding: $xs 0px;
+
+        p {
+          font-size: $md;
+          padding-left: $xxs;
+        }
+        .statusIndicator {
+          width: $md;
+          height: $md;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #header {
+    .searchbar {
+      width: 45%;
+    }
+  }
+  .characters {
+    .character {
+      width: 22%;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .characInner {
+    justify-content: space-evenly;
+
+    img {
+      width: 35%;
+    }
+
+    &__info {
+      &--name {
+        font-size: $xxl3;
+        padding: 0px;
+      }
+
+      &--item {
+        font-size: $lg;
+        padding: $sm 0px;
+        b {
+          font-size: $lg;
+        }
+      }
+
+      &--status {
+        padding: $sm 0px;
+
+        p {
+          font-size: $lg;
+          padding-left: $xs;
+        }
+        .statusIndicator {
+          width: $lg;
+          height: $lg;
+        }
+      }
+    }
+  }
+}
