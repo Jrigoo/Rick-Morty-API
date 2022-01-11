@@ -8,4 +8,4 @@ This application was made using the [Rick and Morty API]("https://rickandmortyap
 
 ![img]("./../design/RickAndMortyDesktop.png)
 
-**See the final result [here]("https://jrigoo-rick-morty.netlify.app/")🔥🔥🔥**
+**See the final result [here](https://jrigoo-rick-morty.netlify.app/)🔥🔥🔥**
